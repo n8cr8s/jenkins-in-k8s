@@ -22,7 +22,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: jenkins
-        image: nsmith2100/jenkins-custom-img:latest
+        image: ${DOCKERUSERNAME}/jenkins-custom-img:latest
         ports:
         - containerPort: 8080
         - containerPort: 50000
