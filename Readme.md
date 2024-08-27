@@ -25,7 +25,7 @@ source set_env.sh
 
 ```
 kubectl apply -f ns.yaml
-kubectl apply -f storage/local-storage-class.yaml
+# kubectl apply -f storage/local-storage-class.yaml
 kubectl apply -f storage/pv.yaml
 
 # Create Role for Jenkins

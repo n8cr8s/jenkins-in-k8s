@@ -23,6 +23,7 @@ spec:
       containers:
       - name: jenkins
         image: $DOCKERUSERNAME/jenkins-custom-img:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         - containerPort: 50000
