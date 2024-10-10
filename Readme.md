@@ -42,3 +42,7 @@ envsubst < deployment.yaml | kubectl apply -f -
 kubectl apply -f svc.yaml
 
 ```
+
+## POST JENKINS Steps: Add and change Default StorageClass for Cluster 
+[https://github.com/n8cr8s/nfs-k8s-setup] (Add NFS Storage Class)
+```
