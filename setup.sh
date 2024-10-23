@@ -14,4 +14,3 @@ envsubst < docker-secret.yaml | kubectl apply -f -
 envsubst < deployment.yaml | kubectl apply -f -
 kubectl apply -f svc.yaml
 
-curl -skSL https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/v4.8.0/deploy/install-driver.sh | bash -s v4.8.0 --
