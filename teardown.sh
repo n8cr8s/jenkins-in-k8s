@@ -10,7 +10,7 @@ kubectl delete -f security/jenkins-role.yaml
 kubectl delete -f security/jenkins-sa.yaml
 
 kubectl delete -f ns.yaml
-kubectl delete -f storage/pv.yaml
+kubectl delete -f storage/pvc-nfs.yaml
 
 
 
