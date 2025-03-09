@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: jenkins-pv
   namespace: jenkins
+  finalizers: []
   labels:
     app: jenkins
 spec:
@@ -10,8 +11,8 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: local-storage-class
   local:
     path: /mnt/data/jenkins
   nodeAffinity:

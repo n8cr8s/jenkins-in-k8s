@@ -32,7 +32,12 @@ spec:
           mountPath: /var/jenkins_home
       imagePullSecrets:
       - name: docker-secret
-  volumes:
-    - name: jenkins-home
-      persistentVolumeClaim:
-        claimName: jenkins-pvc-nfs-storage
+  volumeClaimTemplates:
+  - metadata:
+      name: jenkins-home
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: local-storage-class
+      resources:
+        requests:
+          storage: 2Gi

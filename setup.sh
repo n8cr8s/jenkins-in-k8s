@@ -1,5 +1,6 @@
 kubectl apply -f ns.yaml
-kubectl apply -f storage/pvc-nfs.yaml
+kubectl apply -f storage/local-storage-class.yaml
+kubectl apply -f storage/pv.yaml
 
 # Create Role for Jenkins
 kubectl apply -f security/jenkins-sa.yaml
